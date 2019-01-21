@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="114" id="KGk-i7-Jjw" customClass="ChatOtherCell">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="113.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-other" translatesAutoresizingMaskIntoConstraints="NO" id="O5a-hx-Vqi">
+                        <rect key="frame" x="16" y="8.5" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="NQY-ct-par"/>
+                            <constraint firstAttribute="height" constant="40" id="Ti4-uN-ct0"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1l-6t-ba1">
+                        <rect key="frame" x="64" y="11.5" width="224" height="20"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="20" id="HRs-2h-ene"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.1333333333" green="0.1333333333" blue="0.1333333333" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnp-fo-NxN">
+                        <rect key="frame" x="268" y="31.5" width="36" height="75"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YdG-Gq-4XA" customClass="ChatStateView">
+                                <rect key="frame" x="8" y="27.5" width="20" height="20"/>
+                                <color key="backgroundColor" red="0.94901960780000005" green="0.65098039220000004" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="4UH-Wb-Ftf"/>
+                                    <constraint firstAttribute="width" constant="20" id="Vbi-5b-Twe"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="YdG-Gq-4XA" firstAttribute="leading" secondItem="lnp-fo-NxN" secondAttribute="leading" constant="8" id="Gmd-Em-0zU"/>
+                            <constraint firstItem="YdG-Gq-4XA" firstAttribute="centerY" secondItem="lnp-fo-NxN" secondAttribute="centerY" id="dyc-02-EwS"/>
+                        </constraints>
+                    </view>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mG8-os-94r">
+                        <rect key="frame" x="64" y="31.5" width="204" height="75"/>
+                    </imageView>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="204" placeholderIntrinsicHeight="75" translatesAutoresizingMaskIntoConstraints="NO" id="OsX-pX-4Jo" customClass="ChatMessageView">
+                        <rect key="frame" x="64" y="31.5" width="204" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="75" id="6th-Kz-dv3"/>
+                            <constraint firstAttribute="width" constant="204" id="kic-lp-PCK"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="O5a-hx-Vqi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="08W-kD-pOf"/>
+                    <constraint firstItem="OsX-pX-4Jo" firstAttribute="trailing" secondItem="mG8-os-94r" secondAttribute="trailing" id="4LC-bL-XlD"/>
+                    <constraint firstItem="d1l-6t-ba1" firstAttribute="leading" secondItem="O5a-hx-Vqi" secondAttribute="trailing" constant="8" id="6E5-Xm-iTx"/>
+                    <constraint firstItem="OsX-pX-4Jo" firstAttribute="top" secondItem="d1l-6t-ba1" secondAttribute="bottom" id="AtT-20-w9f"/>
+                    <constraint firstItem="lnp-fo-NxN" firstAttribute="leading" secondItem="OsX-pX-4Jo" secondAttribute="trailing" id="Czh-Ja-S6h"/>
+                    <constraint firstItem="mG8-os-94r" firstAttribute="top" secondItem="OsX-pX-4Jo" secondAttribute="top" id="Q1S-bZ-D9P"/>
+                    <constraint firstItem="O5a-hx-Vqi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="VJQ-7o-mrv"/>
+                    <constraint firstItem="OsX-pX-4Jo" firstAttribute="bottom" secondItem="mG8-os-94r" secondAttribute="bottom" id="WJf-3r-k4V"/>
+                    <constraint firstItem="OsX-pX-4Jo" firstAttribute="bottom" secondItem="lnp-fo-NxN" secondAttribute="bottom" id="YYQ-6y-Sxu"/>
+                    <constraint firstItem="lnp-fo-NxN" firstAttribute="top" secondItem="OsX-pX-4Jo" secondAttribute="top" id="ajn-8S-oKN"/>
+                    <constraint firstAttribute="trailing" secondItem="lnp-fo-NxN" secondAttribute="trailing" constant="16" id="bHf-aI-qK3"/>
+                    <constraint firstAttribute="bottom" secondItem="OsX-pX-4Jo" secondAttribute="bottom" constant="8" id="hlF-Yj-Xzh"/>
+                    <constraint firstAttribute="trailing" secondItem="d1l-6t-ba1" secondAttribute="trailing" constant="32" id="iPx-1Z-ePr"/>
+                    <constraint firstItem="mG8-os-94r" firstAttribute="leading" secondItem="OsX-pX-4Jo" secondAttribute="leading" id="llo-zL-lYM"/>
+                    <constraint firstItem="d1l-6t-ba1" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="11" id="qMa-5R-n3u"/>
+                    <constraint firstItem="OsX-pX-4Jo" firstAttribute="leading" secondItem="O5a-hx-Vqi" secondAttribute="trailing" constant="8" id="zxf-eh-9Tf"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="avatarImageView" destination="O5a-hx-Vqi" id="0kW-TX-0uf"/>
+                <outlet property="backgroundImageView" destination="mG8-os-94r" id="lGE-Kf-oPN"/>
+                <outlet property="chatStateView" destination="YdG-Gq-4XA" id="dKB-90-Wyy"/>
+                <outlet property="messageContentHeightConstraint" destination="6th-Kz-dv3" id="aAW-lZ-eyn"/>
+                <outlet property="messageContentView" destination="OsX-pX-4Jo" id="z5w-Ia-nE4"/>
+                <outlet property="messageContentViewWidthConstraint" destination="kic-lp-PCK" id="EYx-qI-uDS"/>
+                <outlet property="nickNameHeightConstraint" destination="HRs-2h-ene" id="enB-2L-fW9"/>
+                <outlet property="nickNameLabel" destination="d1l-6t-ba1" id="kWS-7c-tsc"/>
+            </connections>
+            <point key="canvasLocation" x="24" y="86.35682158920541"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="user-other" width="64" height="64"/>
+    </resources>
+</document>
