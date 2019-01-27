@@ -62,17 +62,14 @@ static  NSString *const kVoiceNoteText_VolumeTooLow = @"请调大音量后播放
     switch (recordType) {
         case ChatBarRecording:[LFAudioIndicatorHUD show];
             break;
-        case ChatBarRecordFinish:[LFAudioIndicatorHUD hideAllHUD];
-            break;
-        case ChatBarRecordCancel:[LFAudioIndicatorHUD hideAllHUD];
-            break;
         case ChatBarRecordDragEnter:[[LFAudioIndicatorHUD shared] dragEnterOperation];
             break;
         case ChatBarRecordDragExit:[[LFAudioIndicatorHUD shared] dragExitOperation];
             break;
-        case ChatBarRecordTooLong:[LFAudioIndicatorHUD hideAllHUD];
-            break;
-        case ChatBarRecordTooShort:[LFAudioIndicatorHUD hideAllHUD];
+        case ChatBarRecordFinish:
+        case ChatBarRecordCancel:
+        case ChatBarRecordTooLong:
+        case ChatBarRecordTooShort:
         default:[LFAudioIndicatorHUD hideAllHUD];
             break;
     }
@@ -202,12 +199,12 @@ static  NSString *const kVoiceNoteText_VolumeTooLow = @"请调大音量后播放
 }
 
 //改变音量大小视图
-- (void)changeVolumeView:(CGFloat)value {
-    NSInteger index = round(value);
-    index = index > 8 ? 8 : index;
-    index = index < 1 ? 1 : index;
+- (void)changeVolumeView:(int)value {
+//    NSInteger index = round(value);
+//    index = index > 8 ? 8 : index;
+//    index = index < 1 ? 1 : index;
     
-    NSString *imageName = [NSString stringWithFormat:@"RecordingSignal00%ld", (long)index];
+    NSString *imageName = [NSString stringWithFormat:@"RecordingSignal00%ld", (long)value];
     self.volumeImageView.image = [UIImage imageNamed:imageName];
 }
 

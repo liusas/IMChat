@@ -107,3 +107,11 @@
 }
 
 @end
+
+@implementation ChatVoiceMessage
+
+- (ChatMessageType)messageType {
+    return ChatMessageTypeVoice;
+}
+
+@end

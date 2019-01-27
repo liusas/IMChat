@@ -69,6 +69,13 @@
 		03219ACA219D83BC00BE0748 /* UITableView+cellRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 03219AC9219D83BC00BE0748 /* UITableView+cellRegister.m */; };
 		03219ACC219ECD3400BE0748 /* ChatImageView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03219ACB219ECD3400BE0748 /* ChatImageView.xib */; };
 		034271D121BA153200B55A33 /* ChatTextParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 034271D021BA153200B55A33 /* ChatTextParser.m */; };
+		036DCD1221F6EB6500D27DBC /* libopencore-amrnb.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 036DCD1021F6EB6500D27DBC /* libopencore-amrnb.a */; };
+		036DCD1321F6EB6500D27DBC /* amr_wav_converter.c in Sources */ = {isa = PBXBuildFile; fileRef = 036DCD1121F6EB6500D27DBC /* amr_wav_converter.c */; };
+		036DCD1621F742D300D27DBC /* ChatViewController+ChatVoice.m in Sources */ = {isa = PBXBuildFile; fileRef = 036DCD1521F742D300D27DBC /* ChatViewController+ChatVoice.m */; };
+		036DCD1B21F9F17C00D27DBC /* CoreAudio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036DCD1A21F9F17C00D27DBC /* CoreAudio.framework */; };
+		036DCD1D21F9F1A300D27DBC /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036DCD1C21F9F1A300D27DBC /* AudioToolbox.framework */; };
+		036DCD1F21F9F1AD00D27DBC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036DCD1E21F9F1AD00D27DBC /* AVFoundation.framework */; };
+		036DCD2121F9F1BA00D27DBC /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 036DCD2021F9F1BA00D27DBC /* Foundation.framework */; };
 		037A80D421B6828400C07859 /* UIView+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 037A80D321B6828400C07859 /* UIView+Frame.m */; };
 		037AAC9021AEDBD9001F3990 /* ChatMoreView.m in Sources */ = {isa = PBXBuildFile; fileRef = 037AAC8F21AEDBD9001F3990 /* ChatMoreView.m */; };
 		037AAC9321AF965E001F3990 /* ChatFaceView.m in Sources */ = {isa = PBXBuildFile; fileRef = 037AAC9221AF965E001F3990 /* ChatFaceView.m */; };
@@ -279,6 +286,15 @@
 		03219ACB219ECD3400BE0748 /* ChatImageView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ChatImageView.xib; sourceTree = "<group>"; };
 		034271CF21BA153200B55A33 /* ChatTextParser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatTextParser.h; sourceTree = "<group>"; };
 		034271D021BA153200B55A33 /* ChatTextParser.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatTextParser.m; sourceTree = "<group>"; };
+		036DCD0F21F6EB6500D27DBC /* amr_wav_converter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = amr_wav_converter.h; sourceTree = "<group>"; };
+		036DCD1021F6EB6500D27DBC /* libopencore-amrnb.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "libopencore-amrnb.a"; sourceTree = "<group>"; };
+		036DCD1121F6EB6500D27DBC /* amr_wav_converter.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = amr_wav_converter.c; sourceTree = "<group>"; };
+		036DCD1421F742D300D27DBC /* ChatViewController+ChatVoice.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ChatViewController+ChatVoice.h"; sourceTree = "<group>"; };
+		036DCD1521F742D300D27DBC /* ChatViewController+ChatVoice.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "ChatViewController+ChatVoice.m"; sourceTree = "<group>"; };
+		036DCD1A21F9F17C00D27DBC /* CoreAudio.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreAudio.framework; path = System/Library/Frameworks/CoreAudio.framework; sourceTree = SDKROOT; };
+		036DCD1C21F9F1A300D27DBC /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		036DCD1E21F9F1AD00D27DBC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		036DCD2021F9F1BA00D27DBC /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		037A80D221B6828400C07859 /* UIView+Frame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIView+Frame.h"; sourceTree = "<group>"; };
 		037A80D321B6828400C07859 /* UIView+Frame.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIView+Frame.m"; sourceTree = "<group>"; };
 		037AAC8E21AEDBD9001F3990 /* ChatMoreView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatMoreView.h; sourceTree = "<group>"; };
@@ -404,7 +420,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				036DCD2121F9F1BA00D27DBC /* Foundation.framework in Frameworks */,
+				036DCD1F21F9F1AD00D27DBC /* AVFoundation.framework in Frameworks */,
+				036DCD1D21F9F1A300D27DBC /* AudioToolbox.framework in Frameworks */,
+				036DCD1B21F9F17C00D27DBC /* CoreAudio.framework in Frameworks */,
 				03E4BAE121D08DB9001A23CB /* WebP.framework in Frameworks */,
+				036DCD1221F6EB6500D27DBC /* libopencore-amrnb.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -432,6 +453,7 @@
 				0308890A21858C4000861C14 /* IMDemoTests */,
 				0308891521858C4000861C14 /* IMDemoUITests */,
 				030888F021858C3F00861C14 /* Products */,
+				036DCD1921F9F17C00D27DBC /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -704,6 +726,8 @@
 			children = (
 				03211AD6218DCA8D00DABCC6 /* ChatViewController.h */,
 				03211AD7218DCA8D00DABCC6 /* ChatViewController.m */,
+				036DCD1421F742D300D27DBC /* ChatViewController+ChatVoice.h */,
+				036DCD1521F742D300D27DBC /* ChatViewController+ChatVoice.m */,
 				03EBE88321EED8C8003DF08A /* ChatViewController+ChatCellDelegate.h */,
 				03EBE88421EED8C8003DF08A /* ChatViewController+ChatCellDelegate.m */,
 			);
@@ -752,6 +776,27 @@
 				037A80D321B6828400C07859 /* UIView+Frame.m */,
 			);
 			path = Category;
+			sourceTree = "<group>";
+		};
+		036DCD0E21F6EB6500D27DBC /* libopencore */ = {
+			isa = PBXGroup;
+			children = (
+				036DCD1121F6EB6500D27DBC /* amr_wav_converter.c */,
+				036DCD0F21F6EB6500D27DBC /* amr_wav_converter.h */,
+				036DCD1021F6EB6500D27DBC /* libopencore-amrnb.a */,
+			);
+			path = libopencore;
+			sourceTree = "<group>";
+		};
+		036DCD1921F9F17C00D27DBC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				036DCD2021F9F1BA00D27DBC /* Foundation.framework */,
+				036DCD1E21F9F1AD00D27DBC /* AVFoundation.framework */,
+				036DCD1C21F9F1A300D27DBC /* AudioToolbox.framework */,
+				036DCD1A21F9F17C00D27DBC /* CoreAudio.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		037AAC9D21B3BB10001F3990 /* Helper */ = {
@@ -873,6 +918,7 @@
 		03E4BAE821D20CF4001A23CB /* LFAudio */ = {
 			isa = PBXGroup;
 			children = (
+				036DCD0E21F6EB6500D27DBC /* libopencore */,
 				03E4BAE921D20F14001A23CB /* LFAudioIndicatorHUD.h */,
 				03E4BAEA21D20F14001A23CB /* LFAudioIndicatorHUD.m */,
 				037E6EA421D7AD3100CC28A5 /* LFAudioRecorder.h */,
@@ -1071,6 +1117,7 @@
 				03211A7F218DCA3500DABCC6 /* FBKVOController.m in Sources */,
 				03E4BAD321D08DB9001A23CB /* YYMemoryCache.m in Sources */,
 				03E4BAD921D08DB9001A23CB /* YYAnimatedImageView.m in Sources */,
+				036DCD1321F6EB6500D27DBC /* amr_wav_converter.c in Sources */,
 				03F4331C21BF60DF00BB2A44 /* TZProgressView.m in Sources */,
 				03F4331521BF60DF00BB2A44 /* TZAssetCell.m in Sources */,
 				03E4BAD621D08DB9001A23CB /* YYImage.m in Sources */,
@@ -1082,6 +1129,7 @@
 				03F95B0A219470200075D485 /* ChatTextView.m in Sources */,
 				03FE8B6A21AA994C00831E6B /* ChatBar.m in Sources */,
 				03E4BAE021D08DB9001A23CB /* YYWebImageOperation.m in Sources */,
+				036DCD1621F742D300D27DBC /* ChatViewController+ChatVoice.m in Sources */,
 				03F95B0D2194702B0075D485 /* ChatImageView.m in Sources */,
 				03211A6E218DCA3500DABCC6 /* YYTextKeyboardManager.m in Sources */,
 				03211A78218DCA3500DABCC6 /* NSAttributedString+YYText.m in Sources */,
@@ -1354,6 +1402,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IMDemo/IChat/Vendors/XMNAudio/Vendors/libopencore_amr/lib",
+					"$(PROJECT_DIR)/IMDemo/IChat/Vendors/LFAudio/libopencore",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.buildingOrnament;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -1386,6 +1435,7 @@
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/IMDemo/IChat/Vendors/XMNAudio/Vendors/libopencore_amr/lib",
+					"$(PROJECT_DIR)/IMDemo/IChat/Vendors/LFAudio/libopencore",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.buildingOrnament;
 				PRODUCT_NAME = "$(TARGET_NAME)";

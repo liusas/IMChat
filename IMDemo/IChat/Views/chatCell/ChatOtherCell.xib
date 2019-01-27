@@ -14,19 +14,19 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="114" id="KGk-i7-Jjw" customClass="ChatOtherCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="114"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="113.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="user-other" translatesAutoresizingMaskIntoConstraints="NO" id="O5a-hx-Vqi">
-                        <rect key="frame" x="16" y="8.5" width="40" height="40"/>
+                        <rect key="frame" x="16" y="8" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="40" id="NQY-ct-par"/>
                             <constraint firstAttribute="height" constant="40" id="Ti4-uN-ct0"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="昵称" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d1l-6t-ba1">
-                        <rect key="frame" x="64" y="11.5" width="224" height="20"/>
+                        <rect key="frame" x="64" y="11" width="224" height="20"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="20" id="HRs-2h-ene"/>
                         </constraints>
@@ -35,11 +35,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lnp-fo-NxN">
-                        <rect key="frame" x="268" y="31.5" width="36" height="75"/>
+                        <rect key="frame" x="268" y="31" width="36" height="74.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="YdG-Gq-4XA" customClass="ChatStateView">
                                 <rect key="frame" x="8" y="27.5" width="20" height="20"/>
-                                <color key="backgroundColor" red="0.94901960780000005" green="0.65098039220000004" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="4UH-Wb-Ftf"/>
                                     <constraint firstAttribute="width" constant="20" id="Vbi-5b-Twe"/>
@@ -52,12 +51,13 @@
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mG8-os-94r">
-                        <rect key="frame" x="64" y="31.5" width="204" height="75"/>
+                        <rect key="frame" x="64" y="31" width="204" height="74.5"/>
                     </imageView>
                     <view contentMode="scaleToFill" placeholderIntrinsicWidth="204" placeholderIntrinsicHeight="75" translatesAutoresizingMaskIntoConstraints="NO" id="OsX-pX-4Jo" customClass="ChatMessageView">
-                        <rect key="frame" x="64" y="31.5" width="204" height="75"/>
+                        <rect key="frame" x="64" y="31" width="204" height="74.5"/>
                         <constraints>
-                            <constraint firstAttribute="height" constant="75" id="6th-Kz-dv3"/>
+                            <constraint firstAttribute="height" priority="999" constant="75" id="6th-Kz-dv3"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="95z-VZ-GnT"/>
                             <constraint firstAttribute="width" constant="204" id="kic-lp-PCK"/>
                         </constraints>
                     </view>

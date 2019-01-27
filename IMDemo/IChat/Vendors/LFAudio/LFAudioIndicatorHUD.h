@@ -33,7 +33,7 @@ NS_ASSUME_NONNULL_BEGIN
 
  @param value 音量大小
  */
-+ (void)updateVolumeValue:(CGFloat)value;
++ (void)updateVolumeValue:(int)value;
 @end
 
 NS_ASSUME_NONNULL_END

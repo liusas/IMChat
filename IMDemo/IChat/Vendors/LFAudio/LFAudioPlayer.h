@@ -12,6 +12,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface LFAudioPlayer : NSObject
 
+- (void)startPlaying;
+- (void)stopPlaying;
+
+- (void)playWithUrl:(NSURL *)fileUrl;
+
 @end
 
 NS_ASSUME_NONNULL_END

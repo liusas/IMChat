@@ -30,13 +30,15 @@ static NSString *const kChatOtherSingleCellIdentifier = @"com.kChatOtherSingleCe
 static NSString *const kChatOtherGroupCellIdentifier = @"com.kChatOtherGroupCellIdentifier";//别人发的群聊消息类型
 static NSString *const kMoreItemSelectNotification = @"com.kMoreItemSelectNotification";//更多栏的照片,拍照等事件通知
 
+#define PATH_OF_RECORD_FILE [NSTemporaryDirectory() stringByAppendingString:@"records"]
+
 #define SCREEN_WIDTH  CGRectGetWidth([UIScreen mainScreen].bounds)
 #define SCREEN_HEIGHT CGRectGetHeight([UIScreen mainScreen].bounds)
 #define kMessageViewMaxWidth (SCREEN_WIDTH - 45 - 32 - 16 - 20 - 32)
 
 #define kChatViewHeight  215.0f + (iPhoneX ? 34.f : 0)
 #define kVoiceMessageViewHeight 50.f
-#define kRecordMaxCount 15.f //最大允许录音时间
+#define kRecordMaxCount 60.f //最大允许录音时间
 
 #pragma mark - 枚举定义
 //聊天室类型
@@ -114,13 +116,13 @@ typedef NS_ENUM(NSInteger, ChatShowingView) {
 
 //录音状态
 typedef NS_ENUM(NSInteger, ChatBarRecordType) {
-    ChatBarRecording = 0,
-    ChatBarRecordFinish,
-    ChatBarRecordCancel,
-    ChatBarRecordDragEnter,
-    ChatBarRecordDragExit,
-    ChatBarRecordTooShort,
-    ChatBarRecordTooLong,
+    ChatBarRecording = 0, /**< 开始录音,正在录音*/
+    ChatBarRecordFinish, /**< 录音完成*/
+    ChatBarRecordCancel, /**< 取消录音*/
+    ChatBarRecordDragEnter, /**< 手指移动到录音区域*/
+    ChatBarRecordDragExit, /**< 手指移出录音区域*/
+    ChatBarRecordTooShort, /**< 录音时间太短*/
+    ChatBarRecordTooLong, /**< 录音时间过长*/
 };
 
 //照片相机等的类型

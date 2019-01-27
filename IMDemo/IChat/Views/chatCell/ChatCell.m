@@ -34,7 +34,6 @@
     self.messageContentViewWidthConstraint.constant = [self.messageView intrinsicContentSize].width;
     self.messageContentHeightConstraint.constant = [self.messageView intrinsicContentSize].height;
 
-    /** 修复 iOS10 +  layoutSubview  计算contentSize 不准确问题 */
     self.messageContentView.maskView.frame = CGRectMake(0, 0, self.messageContentViewWidthConstraint.constant, self.messageContentHeightConstraint.constant);
     
     [self setNeedsLayout];

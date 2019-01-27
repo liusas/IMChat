@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <AVFoundation/AVFoundation.h>
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -16,8 +17,31 @@ typedef NS_ENUM(NSInteger, LFAudioEncoderType) {
     LFAudioEncoderTypeMP3,/**< 录音格式为MP3*/
 };
 
+@protocol LFAudioRecorderDelegate <NSObject>
+
+
+/**
+ 录音音波变化
+
+ @param recorder 录音对象
+ @param power 音波强度
+ */
+- (void)didPickSpeckPowerWithRecorder:(AVAudioRecorder *)recorder power:(int)power;
+
+/**
+ 录音完成的回调
+
+ @param recorder 录音对象
+ @param recordingPath 录音地址
+ @param duration 录音时长
+ */
+- (void)didFinishRecordWithRecorder:(AVAudioRecorder *)recorder recordingPath:(NSString *)recordingPath duration:(CGFloat)duration;
+
+@end
+
 @interface LFAudioRecorder : NSObject
 
+@property (nonatomic, weak) id<LFAudioRecorderDelegate> delegate;
 
 /**
  录音的采样率 默认8000(电话的采样率),
@@ -26,6 +50,11 @@ typedef NS_ENUM(NSInteger, LFAudioEncoderType) {
  */
 @property (nonatomic, assign) NSUInteger samplate;
 
+
+/**
+ 判断是否正在录音
+ */
+@property (nonatomic, assign, getter=getIfRecording) BOOL isRecording;
 
 
 /**
@@ -37,6 +66,11 @@ typedef NS_ENUM(NSInteger, LFAudioEncoderType) {
  停止录音
  */
 - (void)stopRecording;
+
+/**
+ 取消录音
+ */
+- (void)cancelRecording;
 
 @end
 

@@ -20,10 +20,14 @@
 
 - (void)setUpViewWithMessage:(ChatVoiceMessage *)aMessage {
     
+    [self.loadVoiceIndicator stopAnimating];
+    
     if (aMessage.ownerType == ChatOwnerSelf) {
         self.playingImageView.contentMode = UIViewContentModeRight;
+        self.playingImageView.image = [UIImage imageNamed:@"SenderVoiceNodePlaying"];
     } else if (aMessage.ownerType == ChatOwnerOther) {
         self.playingImageView.contentMode = UIViewContentModeLeft;
+        self.playingImageView.image = [UIImage imageNamed:@"ReceiverVoiceNodePlaying"];
     }
     
     self.contentSize = CGSizeMake(75 + 2.5 * aMessage.voiceTime, kVoiceMessageViewHeight);

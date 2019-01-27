@@ -7,7 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "LFAudioRecorder.h"
 #import "ChatViewModel.h"
 
 @interface ChatViewController : UIViewController
@@ -16,6 +16,8 @@
 
 @property (nonatomic, assign, readonly) ChatMode chatMode;
 @property (nonatomic, strong) UITableView *tableView;/**< 消息列表*/
+
+@property (nonatomic, strong) LFAudioRecorder *recorder;
 
 - (instancetype)initWithChatMode:(ChatMode)chatMode;
 
@@ -28,5 +30,7 @@
 - (void)setUpGestures;
 
 - (void)getNotificationAndObserver;
+
+- (void)sendMessage:(ChatBaseMessage *)message;
 
 @end

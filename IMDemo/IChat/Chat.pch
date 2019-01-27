@@ -6,6 +6,7 @@
 //  Copyright © 2018年 Liufeng. All rights reserved.
 //
 
+#ifdef __OBJC__
 #ifndef Chat_pch
 #define Chat_pch
 
@@ -25,4 +26,4 @@ static CGFloat const kChatBarMaxHeight = 117.f;
 static CGFloat const kChatBarHeight = 46.f;
 
 #endif /* Chat_pch */
-
+#endif

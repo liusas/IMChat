@@ -8,6 +8,7 @@
 
 #import "ChatViewController.h"
 #import "ChatViewController+ChatCellDelegate.h"
+#import "ChatViewController+ChatVoice.h"
 #import "UITableView+cellRegister.h"
 #import "ChatBar.h"
 #import "ChatCell.h"
@@ -16,7 +17,7 @@
 #import "TZImagePickerController.h"
 #import "LFAudioIndicatorHUD.h"
 
-@interface ChatViewController () <UITableViewDelegate, ChatBarDelegate, FaceViewDelegate, TZImagePickerControllerDelegate>
+@interface ChatViewController () <UITableViewDelegate, ChatBarDelegate, FaceViewDelegate, TZImagePickerControllerDelegate, LFAudioRecorderDelegate>
 
 @property (nonatomic, strong) ChatBar *chatBar;/**< 底部工具栏*/
 @property (nonatomic, strong) ChatMoreView *moreView;/**< 工具栏上加号弹出的更多选项视图*/
@@ -205,7 +206,6 @@
     [self scrollToBottom];
 }
 
-
 /**
  发送图片消息
 
@@ -223,12 +223,27 @@
     [self.chatBar resetChatBarButtonStatus];
 }
 
-#pragma mark 录音状态的KVO监听
-- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSKeyValueChangeKey,id> *)change context:(void *)context {
-    if ([keyPath isEqualToString:@"recordType"]) {
-        ChatBar *chatBar = object;
-        [LFAudioIndicatorHUD currentTypeForOperation:chatBar.recordType];
-    }
+
+/**
+ 发送语音消息
+
+ @param message 语音消息对象
+ */
+- (void)chatBarSendVoiceMessage:(ChatVoiceMessage *)message {
+    [self.chatViewModel sendMessage:message];
+    [self.tableView reloadData];
+    [self scrollToBottom];
+}
+
+#pragma mark - LFAudioRecorderDelegate
+- (void)didFinishRecordWithRecorder:(AVAudioRecorder *)recorder recordingPath:(NSString *)recordingPath duration:(CGFloat)duration {
+    ChatVoiceMessage *message = [[ChatVoiceMessage alloc] initWithContent:recordingPath state:ChatMessageStateSending owner:ChatOwnerSelf chatMode:ChatModeSingle];
+    message.voiceTime = duration;
+    [self chatBarSendVoiceMessage:message];
+}
+
+- (void)didPickSpeckPowerWithRecorder:(AVAudioRecorder *)recorder power:(int)power {
+    [LFAudioIndicatorHUD updateVolumeValue:power];
 }
 
 #pragma mark - FaceViewDelegate

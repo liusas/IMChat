@@ -14,7 +14,7 @@
         <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="121" id="KGk-i7-Jjw" customClass="ChatOwnCell">
             <rect key="frame" x="0.0" y="0.0" width="320" height="121"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
                 <rect key="frame" x="0.0" y="0.0" width="320" height="120.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
@@ -35,11 +35,10 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LqS-at-uvQ">
-                        <rect key="frame" x="16" y="31" width="35" height="79"/>
+                        <rect key="frame" x="16" y="31" width="35" height="80.5"/>
                         <subviews>
                             <view contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="AM3-tg-Zxh" customClass="ChatStateView">
-                                <rect key="frame" x="7" y="29.5" width="20" height="20"/>
-                                <color key="backgroundColor" red="0.4549019608" green="0.67843137249999996" blue="0.98823529409999999" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="7" y="30.5" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="WsP-2s-iIt"/>
                                     <constraint firstAttribute="height" constant="20" id="pq6-DN-ncS"/>
@@ -52,13 +51,14 @@
                         </constraints>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="7hs-tn-5Dw">
-                        <rect key="frame" x="51" y="31" width="205" height="79.5"/>
+                        <rect key="frame" x="51" y="31" width="205" height="81"/>
                     </imageView>
-                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="205" placeholderIntrinsicHeight="80" translatesAutoresizingMaskIntoConstraints="NO" id="MjA-oa-0gW" customClass="ChatMessageView">
-                        <rect key="frame" x="51" y="31" width="205" height="80"/>
+                    <view contentMode="scaleToFill" placeholderIntrinsicWidth="205" placeholderIntrinsicHeight="30" translatesAutoresizingMaskIntoConstraints="NO" id="MjA-oa-0gW" customClass="ChatMessageView">
+                        <rect key="frame" x="51" y="31" width="205" height="81.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="205" id="JAp-gD-O8W"/>
-                            <constraint firstAttribute="height" constant="80" id="V0W-7E-kSi"/>
+                            <constraint firstAttribute="height" priority="999" constant="81.5" id="V0W-7E-kSi"/>
+                            <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="30" id="yNW-xp-BTp"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -91,7 +91,7 @@
                 <outlet property="nickNameHeightConstraint" destination="zol-Bm-xzb" id="64C-y5-Qve"/>
                 <outlet property="nickNameLabel" destination="h8C-3R-FKg" id="WbA-Tl-d8h"/>
             </connections>
-            <point key="canvasLocation" x="150" y="-183"/>
+            <point key="canvasLocation" x="-336" y="-236"/>
         </tableViewCell>
     </objects>
     <resources>

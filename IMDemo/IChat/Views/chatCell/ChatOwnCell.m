@@ -29,10 +29,10 @@
 
 - (void)setUpMessageViewConstraints:(ChatMessageType)messageType {
     [self.messageView makeConstraints:^(MASConstraintMaker *make) {
-        make.left.equalTo(self.messageContentView.left).offset(messageType == ChatMessageTypeImage ? 0 : 16);
-        make.right.equalTo(self.messageContentView.right).offset(messageType == ChatMessageTypeImage ? 0 : -12);
-        make.top.equalTo(self.messageContentView.top).offset(messageType == ChatMessageTypeImage ? 0 : 6);
-        make.bottom.equalTo(self.messageContentView.bottom).offset(messageType == ChatMessageTypeImage ? 0 : -16);
+        make.left.equalTo(self.messageContentView.left).offset(messageType == ChatMessageTypeText ? 16 : 0);
+        make.right.equalTo(self.messageContentView.right).offset(messageType == ChatMessageTypeText ? -16 : 0);
+        make.top.equalTo(self.messageContentView.top).offset(messageType == ChatMessageTypeText ? 6 : 0);
+        make.bottom.equalTo(self.messageContentView.bottom).offset(messageType == ChatMessageTypeText ? -16 : 0);
     }];
 }
 
