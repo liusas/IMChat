@@ -56,9 +56,6 @@
 		03211AD3218DCA3500DABCC6 /* MASViewAttribute.m in Sources */ = {isa = PBXBuildFile; fileRef = 03211A64218DCA3500DABCC6 /* MASViewAttribute.m */; };
 		03211AD8218DCA8D00DABCC6 /* ChatViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03211AD7218DCA8D00DABCC6 /* ChatViewController.m */; };
 		03211ADB218DCE9700DABCC6 /* ChatViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 03211ADA218DCE9700DABCC6 /* ChatViewModel.m */; };
-		03211AE421906BC400DABCC6 /* QQIconNew.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03211AE121906BC400DABCC6 /* QQIconNew.bundle */; };
-		03211AE521906BC400DABCC6 /* QQIcon.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03211AE221906BC400DABCC6 /* QQIcon.bundle */; };
-		03211AE621906BC400DABCC6 /* XMNChat.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 03211AE321906BC400DABCC6 /* XMNChat.bundle */; };
 		03211AE921906BE800DABCC6 /* ChatCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03211AE821906BE800DABCC6 /* ChatCell.m */; };
 		03211AED2190747900DABCC6 /* ChatOwnCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03211AEB2190747900DABCC6 /* ChatOwnCell.m */; };
 		03211AEE2190747900DABCC6 /* ChatOwnCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03211AEC2190747900DABCC6 /* ChatOwnCell.xib */; };
@@ -267,9 +264,6 @@
 		03211ADC218DCF7900DABCC6 /* ChatServer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatServer.h; sourceTree = "<group>"; };
 		03211ADD218DF20200DABCC6 /* ChatConfiguration.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatConfiguration.h; sourceTree = "<group>"; };
 		03211ADE218DF27000DABCC6 /* Chat.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Chat.pch; sourceTree = "<group>"; };
-		03211AE121906BC400DABCC6 /* QQIconNew.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QQIconNew.bundle; sourceTree = "<group>"; };
-		03211AE221906BC400DABCC6 /* QQIcon.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = QQIcon.bundle; sourceTree = "<group>"; };
-		03211AE321906BC400DABCC6 /* XMNChat.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = XMNChat.bundle; sourceTree = "<group>"; };
 		03211AE721906BE800DABCC6 /* ChatCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatCell.h; sourceTree = "<group>"; };
 		03211AE821906BE800DABCC6 /* ChatCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ChatCell.m; sourceTree = "<group>"; };
 		03211AEA2190747900DABCC6 /* ChatOwnCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ChatOwnCell.h; sourceTree = "<group>"; };
@@ -577,9 +571,6 @@
 		0321196E218DC9FD00DABCC6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				03211AE221906BC400DABCC6 /* QQIcon.bundle */,
-				03211AE121906BC400DABCC6 /* QQIconNew.bundle */,
-				03211AE321906BC400DABCC6 /* XMNChat.bundle */,
 				03A7010E21A6E4C4003563A3 /* message.json */,
 			);
 			path = Resource;
@@ -1069,7 +1060,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				03211AF32190748A00DABCC6 /* ChatOtherCell.xib in Resources */,
-				03211AE521906BC400DABCC6 /* QQIcon.bundle in Resources */,
 				03E4BAE421D0B781001A23CB /* ChatVoiceView.xib in Resources */,
 				03F95B1821951B430075D485 /* ChatTextView.xib in Resources */,
 				030888FF21858C4000861C14 /* LaunchScreen.storyboard in Resources */,
@@ -1077,12 +1067,10 @@
 				03211AF82190749900DABCC6 /* ChatSystemCell.xib in Resources */,
 				03219ACC219ECD3400BE0748 /* ChatImageView.xib in Resources */,
 				030888FC21858C4000861C14 /* Assets.xcassets in Resources */,
-				03211AE621906BC400DABCC6 /* XMNChat.bundle in Resources */,
 				030888FA21858C3F00861C14 /* Main.storyboard in Resources */,
 				03211AEE2190747900DABCC6 /* ChatOwnCell.xib in Resources */,
 				03F4331B21BF60DF00BB2A44 /* TZImagePickerController.bundle in Resources */,
 				03E4BAE221D08DB9001A23CB /* WebP.sh in Resources */,
-				03211AE421906BC400DABCC6 /* QQIconNew.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
