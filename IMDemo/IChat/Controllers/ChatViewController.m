@@ -24,6 +24,8 @@
 @property (nonatomic, strong) ChatFaceView *faceView;/**< 表情面板*/
 @property (nonatomic, strong) MASConstraint *chatBarBottomConstraint;/**< chatBar的底部约束*/
 
+@property (nonatomic, assign) BOOL isScrollToBottom;/**< 初始化时让tableView自动滑动到底部*/
+
 @end
 
 @implementation ChatViewController
@@ -31,6 +33,7 @@
 - (instancetype)initWithChatMode:(ChatMode)chatMode {
     if (self = [super init]) {
         self.chatViewModel = [[ChatViewModel alloc] initWithChatMode:chatMode];
+        self.isScrollToBottom = YES;//初始化时,在视图加载完以后,tableview自动滑动到底部(无滚动效果)
     }
     return self;
 }
@@ -45,7 +48,14 @@
 }
 
 - (void)viewDidLayoutSubviews {
+    //1.点击图片浏览器时会走这个方法,所以列表会滑动到底部导致发生错误
+    //2.长图在加载过一次后,再次点击图片,展示的长图有问题
     [self scrollToBottom];
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    self.isScrollToBottom = NO;
 }
 
 /**
